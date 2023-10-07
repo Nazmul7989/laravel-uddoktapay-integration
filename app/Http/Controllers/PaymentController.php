@@ -13,8 +13,8 @@ class PaymentController extends Controller
         $apiKEY = config('uddoktapay.api_key');
 
         $fields = [
-            'full_name' => 'Nazmul',
-            'email'     => 'nazmul.ns7989@gmail.com',
+            'full_name' => 'Nazmul', //$request->user_name
+            'email'     => 'example@gmail.com',//$request->user_email
             'amount'    => '100',
             'metadata'  => [
                 'user_id'  => '10',
@@ -96,6 +96,7 @@ class PaymentController extends Controller
            $responseObject = json_decode($response, true);
 
 //           dd($responseObject);
+            //Store payment information and order details in your database
 
             return redirect()->route('home')->with('success', 'Order placed successfully.');
 
