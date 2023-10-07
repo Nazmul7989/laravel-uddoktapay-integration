@@ -1,7 +1,7 @@
 See Documentation here - https://uddoktapay.readme.io/reference/api-information
 
 ### # CSRF Token Error / 419
-In Laravel, you can handle CSRF Token Errors (status code 419) by customizing the "VerifyCsrfToken middleware", which is located in the "app/Http/Middleware/VerifyCsrfToken.php" file. To address this error, you need to declare the success, fail, and cancel URLs/routes in the middleware.
+In Laravel, you can handle CSRF Token Errors (status code 419) by customizing the "VerifyCsrfToken middleware", which is located in the "app/Http/Middleware/VerifyCsrfToken.php" file. To address this error, you need to declare the success and cancel URLs/routes in the middleware.
 
 
 ```
