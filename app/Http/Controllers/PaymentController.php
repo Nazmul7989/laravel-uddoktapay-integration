@@ -52,6 +52,8 @@ class PaymentController extends Controller
 
        if ($responseObject['status'] == true && $responseObject['payment_url'] != null) {
             return redirect()->away($responseObject['payment_url']);
+           //For Inertia Js, Use this to avoid whole tab opening as modal
+          // return inertia()->location($responseObject['payment_url']);
        }else{
            return redirect()->route('home')->with('error', 'Payment Url Generation Failed!');
        }
